@@ -1,0 +1,7 @@
+# VS Files #
+*.sln
+*.vcproj
+*.filters
+*.user
+Debug
+old
