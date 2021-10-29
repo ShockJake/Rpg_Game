@@ -10,6 +10,7 @@
 #include "Item.h"
 #include "Weapons.h"
 #include "Backpack.h"
+#include "game_locale.h"
 
 using namespace std;
 
@@ -35,23 +36,23 @@ private:
 
 	Atribute atrs[5]
 	{
-		Atribute("Сила"),
-		Atribute("Восприятие"),
-		Atribute("Выносливость"),
-		Atribute("Мудрость"),
-		Atribute("Удача")
+		Atribute(Locale::getText(Locale::strength)),
+		Atribute(Locale::getText(Locale::perseption)),
+		Atribute(Locale::getText(Locale::endurance)),
+		Atribute(Locale::getText(Locale::wisdom)),
+		Atribute(Locale::getText(Locale::luck))
 	};
 
 	Skill skills[8]
 	{
-		Skill("Малый меч"),
-		Skill("Средний меч"),
-		Skill("Большой меч"),
-		Skill("Легкая броня"),
-		Skill("Средняя броня"),
-		Skill("Тяжелая броня"),
-		Skill("Малый лук"),
-		Skill("Длинный лук")
+		Skill(Locale::getText(Locale::small_sword)),
+		Skill(Locale::getText(Locale::medium_sword)),
+		Skill(Locale::getText(Locale::long_sword)),
+		Skill(Locale::getText(Locale::light_armor)),
+		Skill(Locale::getText(Locale::medium_armor)),
+		Skill(Locale::getText(Locale::heavy_armor)),
+		Skill(Locale::getText(Locale::little_bow)),
+		Skill(Locale::getText(Locale::long_bow))
 	};
 
 	Active_Skill a_skills[3]

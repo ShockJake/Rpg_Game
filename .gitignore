@@ -1,7 +1,8 @@
 # VS Files #
 *.sln
-*.vcproj
-*.filters
-*.user
-Debug
-old
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+/Debug/
+/old/
+./.vs

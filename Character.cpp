@@ -24,12 +24,12 @@ bool Character::chooseRace(unsigned short int option_int)
 {
 	if (option_int > 4 || option_int < 1)
 	{
-		cerr << "--- Ошибка, нет такой опции! ---" << endl;
+		cerr << "--- !Error, there is no such option ---" << endl;
 		return false;
 	}
 	else if (option_int == 1)
 	{
-		Race = "Человек";
+		Race = "Human";
 
 		skills[0].increaseLevel();
 		skills[1].increaseLevel();
@@ -43,7 +43,7 @@ bool Character::chooseRace(unsigned short int option_int)
 	}
 	else if (option_int == 2)
 	{
-		Race = "Эльф";
+		Race = "Elf";
 
 		skills[0].increaseLevel();
 		skills[3].increaseLevel();
@@ -56,7 +56,7 @@ bool Character::chooseRace(unsigned short int option_int)
 	}
 	else if (option_int == 3)
 	{
-		Race = "Гном";
+		Race = "Gnome";
 
 		skills[0].increaseLevel();
 		skills[1].increaseLevel();
@@ -81,7 +81,7 @@ bool Character::chooseRace(unsigned short int option_int)
 
 void Character::showSkills()
 {
-	cout << "#   Имя умения:  |  Уровень:" << endl;
+	cout << "#   Skill name:  |  Level:" << endl;
 
 	for (int i = 0; i < 8; i++)
 	{
@@ -91,7 +91,7 @@ void Character::showSkills()
 
 void Character::showIncreasedArrtibutes()
 {
-	cout << "Вы получаете прибавку к атрибутам: " << endl;
+	cout << "You increased atribute: " << endl;
 	for (int i = 0; i < 5; i++)
 	{
 		if (atrs[i].getLevelOfAtribute() > 1)
@@ -103,7 +103,7 @@ void Character::showIncreasedArrtibutes()
 
 void Character::showIncreasedSkills()
 {
-	cout << "Вы получаете прибавку к навыкам: " << endl;
+	cout << "You increase skill: " << endl;
 	for (int i = 0; i < 8; i++)
 	{
 		if (skills[i].getLevel() > 1)
@@ -115,7 +115,7 @@ void Character::showIncreasedSkills()
 
 void Character::showIncreasedActiveSkills()
 {
-	cout << "Вы получаете умения: " << endl;
+	cout << "You get new skills: " << endl;
 	for (int i = 0; i < 3; i++)
 	{
 		if (a_skills[i].getNameOfActiveSkill() != "NON-USED")
@@ -131,12 +131,12 @@ bool Character::chooseClass(unsigned short int option_int)
 
 	if (option_int > 4 || option_int < 1)
 	{
-		cerr << "--- Ошибка, нет такой опции! ---" << endl;
+		cerr << "--- Error, there is no such option! ---" << endl;
 		return false;
 	}
 	else if (option_int == 1)
 	{
-		Class = "Воин";
+		Class = "Warrior";
 		a_skills[0].setParameters("Рассекающий удар", 3, 1, false, "atack");
 		a_skills[1].setParameters("Вихрь клинков", 4, 2, false, "atack");
 		a_skills[2].setParameters("Ярость", 0, 4, false, "spell");
@@ -176,11 +176,11 @@ void Character::setRace()
 	bool is_end = false;
 	while (!is_end)
 	{
-		cout << "Выберите рассу персонажа: " << endl;
-		cout << " 1) Человек" << endl;
-		cout << " 2) Эльф" << endl;
-		cout << " 3) Гном" << endl;
-		cout << " 4) - Получить справку о рассах -" << endl;
+		cout << "Choose character's race: " << endl;
+		cout << " 1) Human" << endl;
+		cout << " 2) Elf" << endl;
+		cout << " 3) Gnome" << endl;
+		cout << " 4) - Get information about races -" << endl;
 		cin >> option_str;
 		if (!checkNumber(option_str))
 		{
@@ -206,11 +206,11 @@ void Character::setClass()
 	bool is_end = false;
 	while (!is_end)
 	{
-		cout << "Выберите класс персонажа: " << endl;
-		cout << " 1) Воин" << endl;
-		cout << " 2) Маг" << endl;
-		cout << " 3) Лучник" << endl;
-		cout << " 4) - Получить справку по классам - " << endl;
+		cout << "Choose character's class: " << endl;
+		cout << " 1) Warrior" << endl;
+		cout << " 2) Mage" << endl;
+		cout << " 3) Ranger" << endl;
+		cout << " 4) - Get information about classes - " << endl;
 		cin >> option_str;
 		if (!checkNumber(option_str))
 		{
@@ -222,7 +222,7 @@ void Character::setClass()
 			is_end = chooseClass(option_int);
 		}
 	}
-	cout << "Вы выбрали класс: " << Class << endl;
+	cout << "You choosed class: " << Class << endl;
 	showIncreasedActiveSkills();
 }
 
@@ -234,11 +234,11 @@ void Character::levelUp()
 		{
 			level++;
 			cout << string(5, '*') << endl;
-			cout << "Уровень повышен!!!" << endl;
-			cout << "Ваш уровень: " << level << endl;
+			cout << "Level Up!!!" << endl;
+			cout << "Your level: " << level << endl;
 			if (level < 4)
 			{
-				cout << "\nТеперь вы можете делать: " << endl;
+				cout << "\nNow you can do: " << endl;
 				a_skills[level - 2].changePermition();
 				cout << " - " << a_skills[level - 2].getNameOfActiveSkill() << endl;
 			}
@@ -262,7 +262,7 @@ void Character::gainExp(unsigned int exp)
 
 void Character::showAtributes()
 {
-	cout << "--- Атрибуты ---" << endl;
+	cout << "--- Atributes ---" << endl;
 	for (int i = 0; i < 5; i++)
 	{
 		cout << i + 1 << ") " << atrs[i].getNameOfAtribute() << "\t - " << atrs[i].getLevelOfAtribute() << endl;
@@ -281,8 +281,8 @@ void Character::setAtributes()
 		cout << string(20, '=') << endl;
 		showAtributes();
 		cout << string(20, '=') << endl;
-		cout << "У вас " << n << " очков атрибутов" << endl;
-		cout << "Какой атрибут вы хотите повысить?" << endl;
+		cout << "You have " << n << " points of atributes" << endl;
+		cout << "Which atribute do you want to increase?" << endl;
 		cin >> operation_str;
 		if (!checkNumber(operation_str))
 		{
@@ -304,7 +304,7 @@ void Character::setHealthPoints()
 
 void Character::showCharacterSet()
 {
-	cout << string(6, '=') << " Персонаж: " << name << " " << string(6, '=') << " Здоровье: " << health_p << string(3, '=') << endl;
+	cout << string(6, '=') << " Character: " << name << " " << string(6, '=') << " Health: " << health_p << string(3, '=') << endl;
 	showAtributes();
 	cout << string(25, '=') << endl;
 	showSkills();

@@ -1,4 +1,5 @@
 #include "functions.h"
+#include "game_locale.h"
 using namespace std;
 
 bool checkNumber(string str) 
@@ -7,12 +8,17 @@ bool checkNumber(string str)
     if (str[0]=='-')
     {
         n++;
-        for (int i = 1; i < str.length(); i++)
-            if (isdigit(str[i]) == false) n = n-2;    
+        for (unsigned int i = 1; i < str.length(); i++)
+        {
+            if (isdigit(str[i]) == false) n = n - 2;
+        }
     } 
     
-    else for (int i = 0; i < str.length(); i++)
-        if (isdigit(str[i]) == false) n = n-2;
+    else 
+        for (unsigned int i = 0; i < str.length(); i++)
+        {
+            if (isdigit(str[i]) == false) n = n - 2;
+        }
         if(n<=0) return false;
     return true;
 }
@@ -31,7 +37,7 @@ void getText(const char file_name_char[50])
         }
         file.close();
     }
-    else cout << "!!!-ERROR-!!! - Unable to open file: " << file_name_char << endl;
+    else cout << Locale::getText(Locale::file_error) << file_name_char << endl;
 }
 
 
