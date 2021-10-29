@@ -9,26 +9,26 @@ bool Locale::setLocale(int n)
 	}
 	else if (n == Locale::RU)
 	{
-		texts[menu] = "Меню\n 1) Начать игру\n 2) Выйти";
-		texts[input_error] = " --- Ошибочный ввод --- ";
-		texts[write_charaters_name] = "Введи имя персонажа";
+		texts[menu] = "РњРµРЅСЋ\n 1) РќР°С‡Р°С‚СЊ РёРіСЂСѓ\n 2) Р’С‹Р№С‚Рё";
+		texts[input_error] = " --- РћС€РёР±РѕС‡РЅС‹Р№ РІРІРѕРґ --- ";
+		texts[write_charaters_name] = "Р’РІРµРґРё РёРјСЏ РїРµСЂСЃРѕРЅР°Р¶Р°";
 
-		texts[strength] = "Сила";
-		texts[perseption] = "Восприятие";
-		texts[endurance] = "Выносливость";
-		texts[wisdom] = "Мудрость";
-		texts[luck] = "Удача";
+		texts[strength] = "РЎРёР»Р°";
+		texts[perseption] = "Р’РѕСЃРїСЂРёСЏС‚РёРµ";
+		texts[endurance] = "Р’С‹РЅРѕСЃР»РёРІРѕСЃС‚СЊ";
+		texts[wisdom] = "РњСѓРґСЂРѕСЃС‚СЊ";
+		texts[luck] = "РЈРґР°С‡Р°";
 
-		texts[small_sword] = "Малый меч";
-		texts[medium_sword] = "Полуторный меч";
-		texts[long_sword] = "Длинный меч";
-		texts[light_armor] = "Легкая броня";
-		texts[medium_armor] = "Средняя броня";
-		texts[heavy_armor] = "Тежелая броня";
-		texts[little_bow] = "Малый лук";
-		texts[long_bow] = "Длинный лук";
+		texts[small_sword] = "РњР°Р»С‹Р№ РјРµС‡";
+		texts[medium_sword] = "РџРѕР»СѓС‚РѕСЂРЅС‹Р№ РјРµС‡";
+		texts[long_sword] = "Р”Р»РёРЅРЅС‹Р№ РјРµС‡";
+		texts[light_armor] = "Р›РµРіРєР°СЏ Р±СЂРѕРЅСЏ";
+		texts[medium_armor] = "РЎСЂРµРґРЅСЏСЏ Р±СЂРѕРЅСЏ";
+		texts[heavy_armor] = "РўРµР¶РµР»Р°СЏ Р±СЂРѕРЅСЏ";
+		texts[little_bow] = "РњР°Р»С‹Р№ Р»СѓРє";
+		texts[long_bow] = "Р”Р»РёРЅРЅС‹Р№ Р»СѓРє";
 
-		texts[file_error] = "!!!-Ошибка-!!! - Невозможно открыть файл: ";
+		texts[file_error] = "!!!-РћС€РёР±РєР°-!!! - РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р»: ";
 
 		return true;
 	}
