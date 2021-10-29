@@ -1,6 +1,0 @@
-﻿  Character.cpp
-  Game.cpp
-  main.cpp
-C:\Projects\V_Studio\RPG_GAME\main.cpp(7,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Создание кода...
-  RPG_GAME.vcxproj -> C:\Projects\V_Studio\RPG_GAME\x64\Debug\RPG_GAME.exe
