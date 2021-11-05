@@ -1,7 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <iostream>
 #include <fstream>
 #include <cstdlib>
 #include <string>

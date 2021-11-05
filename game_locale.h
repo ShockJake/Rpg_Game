@@ -31,7 +31,7 @@ public:
 	static string light_armor;
 	static string medium_armor;
 	static string heavy_armor;
-	static string little_bow;
+	static string small_bow;
 	static string long_bow;
 private:
 	static map<string, string> texts;

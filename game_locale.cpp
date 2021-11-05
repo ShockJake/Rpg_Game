@@ -25,7 +25,7 @@ bool Locale::setLocale(int n)
 		texts[light_armor] = "Легкая броня";
 		texts[medium_armor] = "Средняя броня";
 		texts[heavy_armor] = "Тежелая броня";
-		texts[little_bow] = "Малый лук";
+		texts[small_bow] = "Малый лук";
 		texts[long_bow] = "Длинный лук";
 
 		texts[file_error] = "!!!-Ошибка-!!! - Невозможно открыть файл: ";
@@ -50,7 +50,7 @@ bool Locale::setLocale(int n)
 		texts[light_armor] = "Light armor";
 		texts[medium_armor] = "Medium armor";
 		texts[heavy_armor] = "Heavy armor";
-		texts[little_bow] = "Little bow";
+		texts[small_bow] = "Small bow";
 		texts[long_bow] = "Long bow";
 
 		texts[file_error] = "!!!-ERROR-!!! - Unable to open file: ";
@@ -85,7 +85,7 @@ string Locale::long_sword = "long_sword";
 string Locale::light_armor = "light_armor ";
 string Locale::medium_armor = "medium_armor";
 string Locale::heavy_armor = "heavy_armor";
-string Locale::little_bow = "little_bow";
+string Locale::small_bow = "small_bow";
 string Locale::long_bow = "long_bow";
 
 map<string, string> Locale::texts = {};

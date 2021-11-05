@@ -5,4 +5,7 @@
 *.vcxproj.user
 /Debug/
 /old/
-./.vs
+/.vscode/
+/x64/
+/.vs
+/main.pdb
